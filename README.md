@@ -6,7 +6,7 @@
   <br/>
 
   <h1><b>My Enumerable </b></h3>
-
+----
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Enumerable <a name="about-project"></a>
+# 📖 My Enumerable <a name="about-project"></a>
 
 
 The Enumerable provides collection classes with several traversal and searching methods, and with the ability to sort. Done with the goal to practice modules and classes with ruby.
