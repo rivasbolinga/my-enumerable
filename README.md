@@ -1,11 +1,13 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  
-  <br/>
+
+<a href="https://www.ruby-lang.org/en/" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="html5" width="60" height="80"/></a>
 
   <h1><b>My Enumerable </b></h3>
+
+  <p>The Enumerable provides collection classes with several traversal and searching methods, and with the ability to sort. </p>
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -19,8 +21,9 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
+  - [Tests](#tests)
 - [👥 Authors](#authors)
+- [🔮 Future features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -31,47 +34,28 @@
 # 📖 About the project <a name="about-project"></a>
 
 
-The Enumerable provides collection classes with several traversal and searching methods, and with the ability to sort. Done with the goal to practice modules and classes with ruby. The Enumerable module provides a set of methods that can be used with any collection-like object to work with its elements in an iterable and functional manner. This means that any object that includes the Enumerable module gains access to the methods defined within it.
+It is Done with the goal to practice modules and classes with ruby. 
+The Enumerable module provides a set of methods that can be used with any collection-like object to work with its elements in an iterable and functional manner. 
+This means that any object that includes the Enumerable module gains access to the methods defined within it.
+Done as a collaborative project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-<a href="https://www.ruby-lang.org/en/" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="html5" width="60" height="100"/></a>
+<a href="https://www.ruby-lang.org/en/" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="html5" width="60" height="80"/></a>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- Create a class `MyList` that has an instance variable `@list`.
-- In `MyList` implement a method `#each` that yields successive members of `@list` and uses the `MyEnumerable` module.
-- Create a module `MyEnumerable` that implements the following methods (they should have the same funcionality as methods in [Enumerable](https://ruby-doc.org/core-3.0.0/Enumerable.html)):
+- A class `MyList` that has an instance variable `@list`. with a method `#each` that yields successive members of `@list` and uses the `MyEnumerable` module.
+- A Module `MyEnumerable` that implements the following methods (they should have the same funcionality as methods in [Enumerable](https://ruby-doc.org/core-3.0.0/Enumerable.html)):
   - `#all?`
   - `#any?`
   - `#filter`
 - Each class and module should has a separate .rb file.
-- Verify your solution:
-```ruby
-# Create our list
-irb> list = MyList.new(1, 2, 3, 4)
-=> #<MyList: @list=[1, 2, 3, 4]>
 
-# Test #all?
-irb> list.all? {|e| e < 5}
-=> true
-irb> list.all? {|e| e > 5}
-=> false
-
-# Test #any?
-irb> list.any? {|e| e == 2}
-=> true
-irb> list.any? {|e| e == 5}
-=> false
-
-# Test #filter
-irb> list.filter {|e| e.even?}
-=> [2, 4]
-```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -96,18 +80,35 @@ Clone this repository to your desired folder:
   git clone git@github.com:myaccount/my-project.git
 ```
 
-### Install
-Install this project with:
-```
-  cd my-enumerable
-  
-```
 ### Usage
 To run the project, execute the following command:
 ```
-  ruby decode_morse.rb
+  ruby my-enumerable.rb
 ```
 
+## Tests
+
+```ruby
+# Create our list
+irb> list = MyList.new(1, 2, 3, 4)
+=> #<MyList: @list=[1, 2, 3, 4]>
+
+# Test #all?
+irb> list.all? {|e| e < 5}
+=> true
+irb> list.all? {|e| e > 5}
+=> false
+
+# Test #any?
+irb> list.any? {|e| e == 2}
+=> true
+irb> list.any? {|e| e == 5}
+=> false
+
+# Test #filter
+irb> list.filter {|e| e.even?}
+=> [2, 4]
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,6 +129,14 @@ To run the project, execute the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔮 Future Features <a name="future-features"></a>
+
+- Add more enumerable methods.
+- Create more test scenarios.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
