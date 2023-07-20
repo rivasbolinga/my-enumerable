@@ -44,6 +44,35 @@ The Enumerable provides collection classes with several traversal and searching 
 
 ### Key Features <a name="key-features"></a>
 
+- Create a class `MyList` that has an instance variable `@list`.
+- In `MyList` implement a method `#each` that yields successive members of `@list` and uses the `MyEnumerable` module.
+- Create a module `MyEnumerable` that implements the following methods (they should have the same funcionality as methods in [Enumerable](https://ruby-doc.org/core-3.0.0/Enumerable.html)):
+  - `#all?`
+  - `#any?`
+  - `#filter`
+- Each class and module should has a separate .rb file.
+- Verify your solution:
+```ruby
+# Create our list
+irb> list = MyList.new(1, 2, 3, 4)
+=> #<MyList: @list=[1, 2, 3, 4]>
+
+# Test #all?
+irb> list.all? {|e| e < 5}
+=> true
+irb> list.all? {|e| e > 5}
+=> false
+
+# Test #any?
+irb> list.any? {|e| e == 2}
+=> true
+irb> list.any? {|e| e == 5}
+=> false
+
+# Test #filter
+irb> list.filter {|e| e.even?}
+=> [2, 4]
+```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
