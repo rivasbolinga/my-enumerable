@@ -6,7 +6,6 @@
   <br/>
 
   <h1><b>My Enumerable </b></h3>
-----
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -29,10 +28,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 My Enumerable <a name="about-project"></a>
+# 📖 About the project <a name="about-project"></a>
 
 
-The Enumerable provides collection classes with several traversal and searching methods, and with the ability to sort. Done with the goal to practice modules and classes with ruby.
+The Enumerable provides collection classes with several traversal and searching methods, and with the ability to sort. Done with the goal to practice modules and classes with ruby. The Enumerable module provides a set of methods that can be used with any collection-like object to work with its elements in an iterable and functional manner. This means that any object that includes the Enumerable module gains access to the methods defined within it.
 
 ## 🛠 Built With <a name="built-with"></a>
 
