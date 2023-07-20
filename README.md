@@ -5,7 +5,7 @@
   
   <br/>
 
-  <h1><b>My enumerable </b></h3>
+  <h1><b>My Enumerable </b></h3>
 
 </div>
 
