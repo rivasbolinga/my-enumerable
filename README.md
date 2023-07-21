@@ -1,11 +1,12 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+<a href="https://www.ruby-lang.org/en/" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="html5" width="60" height="80"/></a>
+
+  <h1><b>My Enumerable </b></h3>
+
+  <p>The Enumerable provides collection classes with several traversal and searching methods, and with the ability to sort. </p>
 
 </div>
 
@@ -17,76 +18,45 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
+  - [Tests](#tests)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
+- [🔮 Future features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 About the project <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+It is Done with the goal to practice modules and classes with ruby. 
+The Enumerable module provides a set of methods that can be used with any collection-like object to work with its elements in an iterable and functional manner. 
+This means that any object that includes the Enumerable module gains access to the methods defined within it.
+Done as a collaborative project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+<a href="https://www.ruby-lang.org/en/" target="_blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="html5" width="60" height="80"/></a>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+- A class `MyList` that has an instance variable `@list`. with a method `#each` that yields successive members of `@list` and uses the `MyEnumerable` module.
+- A Module `MyEnumerable` that implements the following methods (they should have the same funcionality as methods in [Enumerable](https://ruby-doc.org/core-3.0.0/Enumerable.html)):
+  - `#all?`
+  - `#any?`
+  - `#filter`
+- Each class and module should has a separate .rb file.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,83 +64,51 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+Install ruby. To install ruby in your machine you can follow the steps listed in the [Ruby installation instructions guide](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md)
 
 ### Setup
 
 Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
+```
+  cd my-enumerable
   git clone git@github.com:myaccount/my-project.git
 ```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
 
 ### Usage
-
 To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
 ```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
+  ruby my-enumerable.rb
 ```
---->
 
-### Deployment
+## Tests
 
-You can deploy this project using:
+```ruby
+# Create our list
+irb> list = MyList.new(1, 2, 3, 4)
+=> #<MyList: @list=[1, 2, 3, 4]>
 
-<!--
-Example:
+# Test #all?
+irb> list.all? {|e| e < 5}
+=> true
+irb> list.all? {|e| e > 5}
+=> false
 
-```sh
+# Test #any?
+irb> list.any? {|e| e == 2}
+=> true
+irb> list.any? {|e| e == 5}
+=> false
 
+# Test #filter
+irb> list.filter {|e| e.even?}
+=> [2, 4]
 ```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,31 +116,25 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Andrea Rivas**
 
-👤 **Author1**
+- GitHub: [@rivasbolinga](https://github.com/rivasbolinga)
+- LinkedIn: [Andrea Rivas](https://www.linkedin.com/in/andrearivaspalacios/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Safari Hamuli**
 
-👤 **Author2**
+- GitHub: [@danielsafari143]([https://github.com/githubhandle](https://github.com/danielsafari143))
+- LinkedIn: [Safari Daniel](https://www.linkedin.com/in/safari-daniel/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-features"></a>
+## 🔮 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- Add more enumerable methods.
+- Create more test scenarios.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -220,9 +152,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project give it a star 🌟🌟🌟
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -230,26 +160,8 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
+I would like to thank **![Microverse](https://img.shields.io/badge/Microverse-blueviolet)**  and [Larissa Tao](https://github.com/rica213) for using his template
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
